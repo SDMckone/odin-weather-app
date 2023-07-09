@@ -17,11 +17,120 @@
   box-sizing: border-box;
 }
 
-header {
+html,
+body {
+  height: 100%;
+}
+
+body {
   margin: 20px;
+  font-family: openSans;
 }
 
 h1 {
   font-family: scopeOne;
   font-size: 40px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 60px;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.icon {
+  height: 30px;
+}
+
+#weather-panel-grid {
+  height: 600px;
+}
+
+.weather-panel {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  background-image: url(Assets/Images/sunny.jpg);
+  background-size: cover;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  height: 100%;
+
+  max-width: 500px;
+  max-height: 300px;
+
+  /* Shadow */
+  -webkit-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
+  box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-section {
+  text-align: right;
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  text-align: left;
+  row-gap: 5px;
+}
+
+.day {
+  font-family: openSansItalic;
+}
+
+@media screen and (max-width: 460px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .weather-panel {
+    height: 200px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
