@@ -1,0 +1,27 @@
+@font-face {
+  font-family: openSans;
+  src: url(../../dist/Assets/Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+  font-family: openSansItalic;
+  src: url(../../dist/Assets/Fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+  font-family: scopeOne;
+  src: url(../../dist/Assets/Fonts/Scope_One/ScopeOne-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 20px;
+}
+
+h1 {
+  font-family: scopeOne;
+  font-size: 40px;
+}
