@@ -23,8 +23,12 @@ body {
 }
 
 body {
-  margin: 20px;
+  padding: 20px;
   font-family: openSans;
+}
+
+header {
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -57,22 +61,25 @@ p {
 }
 
 #weather-panel-grid {
-  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+
+  padding-bottom: 20px;
 }
 
 .weather-panel {
   background-color: bisque;
   display: flex;
   flex-direction: column;
-  background-image: url(Assets/Images/sunny.jpg);
+  background-image: url(Assets/Images/snowy.jpg);
   background-size: cover;
   justify-content: space-between;
   padding: 15px;
   border-radius: 10px;
-  height: 100%;
+  border: 1px solid rgb(214, 214, 214);
 
-  max-width: 500px;
-  max-height: 300px;
+  height: 300px;
 
   /* Shadow */
   -webkit-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
@@ -108,7 +115,7 @@ p {
   font-family: openSansItalic;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 530px) {
   h2 {
     font-size: 20px;
   }
@@ -127,6 +134,10 @@ p {
 
   .weather-panel {
     height: 200px;
+  }
+
+  #weather-panel-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   .icon {
