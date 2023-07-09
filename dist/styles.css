@@ -53,7 +53,6 @@ h4 {
 
 p {
   font-size: 20px;
-  font-weight: lighter;
 }
 
 .icon {
@@ -63,13 +62,12 @@ p {
 #weather-panel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 30px;
+  gap: 20px;
 
   padding-bottom: 20px;
 }
 
 .weather-panel {
-  background-color: bisque;
   display: flex;
   flex-direction: column;
   background-image: url(Assets/Images/snowy.jpg);
@@ -78,6 +76,7 @@ p {
   padding: 15px;
   border-radius: 10px;
   border: 1px solid rgb(214, 214, 214);
+  cursor: pointer;
 
   height: 300px;
 
@@ -85,6 +84,11 @@ p {
   -webkit-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
   box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
+}
+
+.weather-panel:hover {
+  scale: 101%;
+  opacity: 90%;
 }
 
 .top-section {
@@ -129,7 +133,7 @@ p {
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .weather-panel {
@@ -138,10 +142,12 @@ p {
 
   #weather-panel-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: -10px;
+    gap: 10px;
   }
 
   .icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 }
