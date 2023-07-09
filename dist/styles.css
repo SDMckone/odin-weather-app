@@ -25,6 +25,12 @@ body {
 body {
   padding: 20px;
   font-family: openSans;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
