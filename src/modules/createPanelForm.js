@@ -29,7 +29,7 @@ function createPanelForm() {
   addLocation.type = "submit";
 
   const checkImg = document.createElement("img");
-  checkImg.src = "assets/Icons/check.svg";
+  checkImg.src = "Assets/Icons/check.svg";
   checkImg.alt = "add location button";
   checkImg.classList.add("icon2");
 
@@ -41,7 +41,7 @@ function createPanelForm() {
   deleteLocation.type = "button";
 
   const trashImg = document.createElement("img");
-  trashImg.src = "assets/Icons/trash.svg";
+  trashImg.src = "Assets/Icons/trash.svg";
   trashImg.alt = "delete location button";
   trashImg.classList.add("icon2");
 

@@ -48,9 +48,9 @@ function createWeatherPanel(weatherPanelItem, useCelsius) {
   const calendarIcon = document.createElement("img");
 
   if (weatherPanelItem.useBlackText) {
-    calendarIcon.src = "assets/Icons/calendar.svg";
+    calendarIcon.src = "Assets/Icons/calendar.svg";
   } else {
-    calendarIcon.src = "assets/Icons/calendar-white.svg";
+    calendarIcon.src = "Assets/Icons/calendar-white.svg";
   }
 
   calendarIcon.classList.add("icon");
@@ -66,9 +66,9 @@ function createWeatherPanel(weatherPanelItem, useCelsius) {
   const tempIcon = document.createElement("img");
 
   if (weatherPanelItem.useBlackText) {
-    tempIcon.src = "assets/Icons/temp.svg";
+    tempIcon.src = "Assets/Icons/temp.svg";
   } else {
-    tempIcon.src = "assets/Icons/temp-white.svg";
+    tempIcon.src = "Assets/Icons/temp-white.svg";
   }
 
   tempIcon.classList.add("icon");
@@ -89,9 +89,9 @@ function createWeatherPanel(weatherPanelItem, useCelsius) {
   const rainIcon = document.createElement("img");
 
   if (weatherPanelItem.useBlackText) {
-    rainIcon.src = "assets/Icons/rain.svg";
+    rainIcon.src = "Assets/Icons/rain.svg";
   } else {
-    rainIcon.src = "assets/Icons/rain-white.svg";
+    rainIcon.src = "Assets/Icons/rain-white.svg";
   }
 
   rainIcon.classList.add("icon");
