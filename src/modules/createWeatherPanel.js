@@ -46,7 +46,13 @@ function createWeatherPanel(weatherPanelItem, useCelsius) {
   bottomSection.classList.add("bottom-section");
 
   const calendarIcon = document.createElement("img");
-  calendarIcon.src = "assets/Icons/calendar.svg";
+
+  if (weatherPanelItem.useBlackText) {
+    calendarIcon.src = "assets/Icons/calendar.svg";
+  } else {
+    calendarIcon.src = "assets/Icons/calendar-white.svg";
+  }
+
   calendarIcon.classList.add("icon");
   bottomSection.appendChild(calendarIcon);
 
@@ -58,7 +64,12 @@ function createWeatherPanel(weatherPanelItem, useCelsius) {
   }
 
   const tempIcon = document.createElement("img");
-  tempIcon.src = "assets/Icons/temp.svg";
+
+  if (weatherPanelItem.useBlackText) {
+    tempIcon.src = "assets/Icons/temp.svg";
+  } else {
+    tempIcon.src = "assets/Icons/temp-white.svg";
+  }
 
   tempIcon.classList.add("icon");
   bottomSection.appendChild(tempIcon);
@@ -76,7 +87,13 @@ function createWeatherPanel(weatherPanelItem, useCelsius) {
   }
 
   const rainIcon = document.createElement("img");
-  rainIcon.src = "assets/Icons/rain.svg";
+
+  if (weatherPanelItem.useBlackText) {
+    rainIcon.src = "assets/Icons/rain.svg";
+  } else {
+    rainIcon.src = "assets/Icons/rain-white.svg";
+  }
+
   rainIcon.classList.add("icon");
   bottomSection.appendChild(rainIcon);
 

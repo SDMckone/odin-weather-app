@@ -4,6 +4,7 @@ async function getWeatherData(apiKey, location) {
   );
 
   const data = await response.json();
+
   return data;
 }
 
