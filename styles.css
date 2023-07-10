@@ -19,6 +19,7 @@
 
 button {
   cursor: pointer;
+  color: black;
 }
 
 html,
@@ -78,6 +79,7 @@ input[type="text"] {
   font-size: 25px;
   font-weight: 100;
   font-family: openSans;
+  padding: 5px;
 }
 
 #weather-panel-grid {
@@ -137,6 +139,7 @@ input[type="text"] {
   width: 40%;
   border: 0px;
   border-radius: 5px;
+  padding: 5px;
 }
 
 #add-location {
