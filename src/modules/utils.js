@@ -18,7 +18,7 @@ class Utils {
     const tempList = [];
 
     for (let i = 1; i < forecastDay.length; i += 1) {
-      tempList.push(forecastDay[i].day.avgtemp_f);
+      tempList.push(Math.trunc(forecastDay[i].day.avgtemp_f));
     }
 
     return tempList;
@@ -29,7 +29,7 @@ class Utils {
     const tempList = [];
 
     for (let i = 1; i < forecastDay.length; i += 1) {
-      tempList.push(forecastDay[i].day.avgtemp_c);
+      tempList.push(Math.trunc(forecastDay[i].day.avgtemp_c));
     }
 
     return tempList;

@@ -39,6 +39,8 @@ body {
 
 header {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
@@ -76,11 +78,6 @@ input[type="text"] {
   font-size: 25px;
   font-weight: 100;
   font-family: openSans;
-}
-
-.icon,
-.icon2 {
-  height: 30px;
 }
 
 #weather-panel-grid {
@@ -121,7 +118,7 @@ input[type="text"] {
 
 #panel-form,
 #add-panel-button {
-  background-color: #ececec;
+  background-color: #d4d4d4;
 }
 
 #form-top-section {
@@ -154,6 +151,23 @@ input[type="text"] {
 #add-panel-button:hover {
   scale: 101%;
   opacity: 90%;
+}
+
+#unit-switch {
+  background-color: #f0f0f0;
+  border: 0px;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: openSans;
+  font-size: 25px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.icon,
+.icon2 {
+  height: 30px;
 }
 
 .top-section {

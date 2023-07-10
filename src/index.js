@@ -6,12 +6,22 @@ import createAddPanelButton from "./modules/createAddPanelButton";
 
 const apiKey = "341cfdefb31e4a3591803936230807";
 
+if (JSON.parse(localStorage.getItem("useCelsius") === null)) {
+  localStorage.setItem("useCelsius", JSON.stringify(false));
+}
+
 let weatherPanelGrid = document.querySelector("#weather-panel-grid");
+const unitSwitch = document.querySelector("#unit-switch");
+if (JSON.parse(localStorage.getItem("useCelsius"))) {
+  unitSwitch.textContent = "C";
+} else {
+  unitSwitch.textContent = "F";
+}
 
 if (JSON.parse(localStorage.getItem("locationList") === null)) {
   localStorage.setItem(
     "locationList",
-    JSON.stringify(["NYC", "Tokyo", "London"])
+    JSON.stringify(["NYC", "London", "Tokyo"])
   );
 }
 
@@ -40,7 +50,10 @@ async function main() {
     }
 
     const weatherPanel = parseResponse(data);
-    const weatherPanelDomElement = createWeatherPanel(weatherPanel);
+    const weatherPanelDomElement = createWeatherPanel(
+      weatherPanel,
+      JSON.parse(localStorage.getItem("useCelsius"))
+    );
     weatherPanelDomElement.addEventListener("click", () => {
       weatherPanelDomElement.remove();
       const tempList = JSON.parse(localStorage.getItem("locationList"));
@@ -76,5 +89,18 @@ async function main() {
 
   weatherPanelGrid.appendChild(panelButton);
 }
+
+unitSwitch.addEventListener("click", () => {
+  localStorage.setItem(
+    "useCelsius",
+    JSON.stringify(!JSON.parse(localStorage.getItem("useCelsius")))
+  );
+  if (JSON.parse(localStorage.getItem("useCelsius"))) {
+    unitSwitch.textContent = "C";
+  } else {
+    unitSwitch.textContent = "F";
+  }
+  main();
+});
 
 main();
