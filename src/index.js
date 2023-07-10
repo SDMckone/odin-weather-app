@@ -1,21 +1,28 @@
-import Utils from "./modules/utils";
+import getWeatherData from "./modules/getWeatherData";
+import parseResponse from "./modules/parseresponse";
+import createWeatherPanel from "./modules/createWeatherPanel";
 
 const apiKey = "341cfdefb31e4a3591803936230807";
+const locationList = [
+  "Raleigh",
+  "London",
+  "Stockholm",
+  "Honolulu",
+  "Tokyo",
+  "Berlin",
+  "batman",
+  "chihuahua",
+];
+const weatherPanelGrid = document.querySelector("#weather-panel-grid");
 
-const location = "Raleigh";
-
-async function getWeather() {
-  const response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=8&aqi=no&alerts=no`
-  );
-
-  const data = await response.json();
-  console.log(data);
-  console.log(Utils.getDays(data));
-  console.log(Utils.getTempsF(data));
-  console.log(Utils.getRainChances(data));
+async function main() {
+  for (let i = 0; i < locationList.length; i += 1) {
+    const data = await getWeatherData(apiKey, locationList[i]);
+    const weatherPanel = parseResponse(data);
+    console.log(weatherPanel);
+    const weatherPanelDomElement = createWeatherPanel(weatherPanel);
+    weatherPanelGrid.appendChild(weatherPanelDomElement);
+  }
 }
 
-getWeather();
-
-console.log("hello");
+main();

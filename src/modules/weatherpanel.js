@@ -10,7 +10,8 @@ class WeatherPanel {
     forecastTempsF,
     forecastTempsC,
     forecastRain,
-    backgroundImage
+    backgroundImage,
+    useBlackText
   ) {
     // Name of this panel's city
     this.cityName = cityName;
@@ -34,6 +35,8 @@ class WeatherPanel {
     this.forecastRain = forecastRain;
     // Background image for this panel
     this.backgroundImage = backgroundImage;
+    // Whether to use black text for this panel
+    this.useBlackText = useBlackText;
   }
 }
 

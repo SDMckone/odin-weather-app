@@ -1,16 +1,16 @@
 @font-face {
   font-family: openSans;
-  src: url(Assets/Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+  src: url(assets/Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
 @font-face {
   font-family: openSansItalic;
-  src: url(Assets/Fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf);
+  src: url(assets/Fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf);
 }
 
 @font-face {
   font-family: scopeOne;
-  src: url(Assets/Fonts/Scope_One/ScopeOne-Regular.ttf);
+  src: url(assets/Fonts/Scope_One/ScopeOne-Regular.ttf);
 }
 
 * {
@@ -25,7 +25,7 @@ body {
 body {
   padding: 20px;
   font-family: openSans;
-  max-width: 1500px;
+  max-width: 2000px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -76,20 +76,19 @@ p {
 .weather-panel {
   display: flex;
   flex-direction: column;
-  background-image: url(Assets/Images/snowy.jpg);
+  background-image: url(assets/Images/snowy.jpg);
   background-size: cover;
   justify-content: space-between;
   padding: 15px;
   border-radius: 10px;
-  border: 1px solid rgb(214, 214, 214);
   cursor: pointer;
 
   height: 300px;
 
   /* Shadow */
-  -webkit-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
-  -moz-box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
-  box-shadow: 5px 6px 14px -1px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
+  box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
 }
 
 .weather-panel:hover {

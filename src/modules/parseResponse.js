@@ -14,6 +14,7 @@ function parseResponse(jsonResponse) {
   const forecastTempsC = Utils.getTempsC(jsonResponse);
   const forecastRain = Utils.getRainChances(jsonResponse);
   const backgroundImage = Utils.getBackgroundImage(jsonResponse);
+  const useBlackText = Utils.useBlackText(jsonResponse);
 
   const weatherPanel = new WeatherPanel(
     cityName,
@@ -26,7 +27,8 @@ function parseResponse(jsonResponse) {
     forecastTempsF,
     forecastTempsC,
     forecastRain,
-    backgroundImage
+    backgroundImage,
+    useBlackText
   );
 
   return weatherPanel;
