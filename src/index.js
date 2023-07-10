@@ -1,6 +1,8 @@
+import Utils from "./modules/utils";
+
 const apiKey = "341cfdefb31e4a3591803936230807";
 
-const location = "London";
+const location = "Raleigh";
 
 async function getWeather() {
   const response = await fetch(
@@ -9,6 +11,9 @@ async function getWeather() {
 
   const data = await response.json();
   console.log(data);
+  console.log(Utils.getDays(data));
+  console.log(Utils.getTempsF(data));
+  console.log(Utils.getRainChances(data));
 }
 
 getWeather();
