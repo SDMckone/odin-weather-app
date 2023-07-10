@@ -88,7 +88,8 @@ input[type="text"] {
 }
 
 .weather-panel,
-#panel-form {
+#panel-form,
+#add-panel-button {
   display: flex;
   flex-direction: column;
   background-size: cover;
@@ -105,7 +106,17 @@ input[type="text"] {
   box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
 }
 
-#panel-form {
+#add-panel-button {
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  font-family: openSans;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+#panel-form,
+#add-panel-button {
   background-color: #ececec;
 }
 
@@ -135,7 +146,8 @@ input[type="text"] {
   background-color: #ffd8d8;
 }
 
-.weather-panel:hover {
+.weather-panel:hover,
+#add-panel-button:hover {
   scale: 101%;
   opacity: 90%;
 }
