@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 html,
 body {
   height: 100%;
@@ -198,7 +202,8 @@ input[type="text"] {
   }
 
   .weather-panel,
-  #panel-form {
+  #panel-form,
+  #add-panel-button {
     height: 200px;
   }
 
@@ -211,5 +216,10 @@ input[type="text"] {
   .icon {
     width: 15px;
     height: 15px;
+  }
+
+  .icon2 {
+    width: 20px;
+    height: 20px;
   }
 }
