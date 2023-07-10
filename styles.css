@@ -61,7 +61,21 @@ p {
   font-size: 20px;
 }
 
-.icon {
+label {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+input[type="text"] {
+  border: 0px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: openSans;
+}
+
+.icon,
+.icon2 {
   height: 30px;
 }
 
@@ -73,10 +87,10 @@ p {
   padding-bottom: 20px;
 }
 
-.weather-panel {
+.weather-panel,
+#panel-form {
   display: flex;
   flex-direction: column;
-  background-image: url(assets/Images/snowy.jpg);
   background-size: cover;
   justify-content: space-between;
   padding: 15px;
@@ -89,6 +103,36 @@ p {
   -webkit-box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
   -moz-box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
   box-shadow: 3px 3px 17px -7px rgba(0, 0, 0, 0.71);
+}
+
+#panel-form {
+  background-color: #ececec;
+}
+
+#form-top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#form-bottom-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+#add-location,
+#delete-location {
+  width: 40%;
+  border: 0px;
+  border-radius: 5px;
+}
+
+#add-location {
+  background-color: #cdffc9;
+}
+
+#delete-location {
+  background-color: #ffd8d8;
 }
 
 .weather-panel:hover {
@@ -141,7 +185,8 @@ p {
     font-size: 16px;
   }
 
-  .weather-panel {
+  .weather-panel,
+  #panel-form {
     height: 200px;
   }
 
